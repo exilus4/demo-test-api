@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>D:\GitHub\exilus4\demo-test-api\bin\Release\net7.0\publish\</_PublishTargetUrl>
-    <History>True|2023-04-28T15:14:04.2840564Z;True|2023-04-28T17:59:13.5950767+08:00;True|2023-04-28T17:47:40.7369107+08:00;True|2023-04-28T17:26:13.2904150+08:00;True|2023-04-28T17:23:01.3114697+08:00;</History>
+    <History>True|2023-05-01T15:50:05.5829741Z;True|2023-05-01T23:16:16.2644071+08:00;True|2023-05-01T23:06:03.0013812+08:00;True|2023-05-01T21:19:28.9696034+08:00;True|2023-05-01T17:38:02.5155476+08:00;True|2023-04-28T23:14:04.2840564+08:00;True|2023-04-28T17:59:13.5950767+08:00;True|2023-04-28T17:47:40.7369107+08:00;True|2023-04-28T17:26:13.2904150+08:00;True|2023-04-28T17:23:01.3114697+08:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

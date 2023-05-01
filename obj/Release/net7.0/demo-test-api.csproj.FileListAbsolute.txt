@@ -276,3 +276,5 @@ D:\GitHub\exilus4\demo-test-api\obj\Release\net7.0\refint\demo-test-api.dll
 D:\GitHub\exilus4\demo-test-api\obj\Release\net7.0\demo-test-api.pdb
 D:\GitHub\exilus4\demo-test-api\obj\Release\net7.0\demo-test-api.genruntimeconfig.cache
 D:\GitHub\exilus4\demo-test-api\obj\Release\net7.0\ref\demo-test-api.dll
+D:\GitHub\exilus4\demo-test-api\bin\Release\net7.0\MySqlConnector.dll
+D:\GitHub\exilus4\demo-test-api\bin\Release\net7.0\Pomelo.EntityFrameworkCore.MySql.dll

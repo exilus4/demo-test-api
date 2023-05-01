@@ -38,12 +38,12 @@ namespace demo_test_api.Controllers
         [HttpGet, Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Authentication>>> GetAuthentication()
         {
-          if (_context.Authentications == null)
+          if (_context.Authentication == null)
           {
               return NotFound();
           }
 
-            var authentication = await _context.Authentications.ToListAsync();
+            var authentication = await _context.Authentication.ToListAsync();
             var authenticationDTO = _mapper.Map<List<Authentication>>(authentication);
 
             return authenticationDTO;
@@ -53,11 +53,11 @@ namespace demo_test_api.Controllers
         [HttpGet("{id}"), Authorize]
         public async Task<ActionResult<Authentication>> GetAuthentication(Guid id)
         {
-          if (_context.Authentications == null)
+          if (_context.Authentication == null)
           {
               return NotFound();
           }
-            var authentication = await _context.Authentications.FindAsync(id);
+            var authentication = await _context.Authentication.FindAsync(id);
 
             if (authentication == null)
             {
@@ -103,12 +103,12 @@ namespace demo_test_api.Controllers
         [HttpPost]
         public async Task<ActionResult<TokenDTO>> PostAuthentication(AuthenticationDTO authenticationDTO)
         {
-          if (_context.Authentications == null)
+          if (_context.Authentication == null)
           {
               return NotFound();
           }
 
-            var authentication = await _context.Authentications.FirstOrDefaultAsync(src => src.username == authenticationDTO.username && src.password == authenticationDTO.password);
+            var authentication = await _context.Authentication.FirstOrDefaultAsync(src => src.username == authenticationDTO.username && src.password == authenticationDTO.password);
             var authenticationDTOMapping = _mapper.Map<AuthenticationDTO>(authentication);
             var tokenDTO = new TokenDTO();
             if (authentication != null)
@@ -125,17 +125,17 @@ namespace demo_test_api.Controllers
         [HttpDelete("{id}"), Authorize]
         public async Task<IActionResult> DeleteAuthentication(Guid id)
         {
-            if (_context.Authentications == null)
+            if (_context.Authentication == null)
             {
                 return NotFound();
             }
-            var authentication = await _context.Authentications.FindAsync(id);
+            var authentication = await _context.Authentication.FindAsync(id);
             if (authentication == null)
             {
                 return NotFound();
             }
 
-            _context.Authentications.Remove(authentication);
+            _context.Authentication.Remove(authentication);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -143,7 +143,7 @@ namespace demo_test_api.Controllers
 
         private bool AuthenticationExists(Guid id)
         {
-            return (_context.Authentications?.Any(e => e.uuid == id)).GetValueOrDefault();
+            return (_context.Authentication?.Any(e => e.uuid == id)).GetValueOrDefault();
         }
 
         private string GenerateToken(AuthenticationDTO authentication)

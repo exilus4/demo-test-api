@@ -276,3 +276,5 @@ D:\GitHub\exilus4\demo-test-api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.
 D:\GitHub\exilus4\demo-test-api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\GitHub\exilus4\demo-test-api\bin\Debug\net7.0\AutoMapper.dll
 D:\GitHub\exilus4\demo-test-api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\GitHub\exilus4\demo-test-api\bin\Debug\net7.0\MySqlConnector.dll
+D:\GitHub\exilus4\demo-test-api\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll

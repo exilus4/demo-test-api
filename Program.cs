@@ -5,11 +5,13 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
+//builder.Services.AddDbContext<AuthenticationContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL_TESTER") ?? throw new InvalidOperationException("Connection string 'MSSQL_TESTER' not found.")));
+var connectionString = builder.Configuration.GetConnectionString("MYSQL_TESTER");
 builder.Services.AddDbContext<AuthenticationContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL_TESTER") ?? throw new InvalidOperationException("Connection string 'MSSQL_TESTER' not found.")));
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 // Add services to the container.
 
