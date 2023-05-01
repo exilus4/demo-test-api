@@ -15,6 +15,6 @@ namespace demo_test_api.Data
         {
         }
 
-        public DbSet<Authentication> Authentications { get; set; } = default!;
+        public DbSet<Authentication> Authentication { get; set; } = default!;
     }
 }
